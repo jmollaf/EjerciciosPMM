@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.LENGTH_SHORT).show();
             }
         });
-   
+
 }
     public void cmdDos_click(View v) {
         Toast.makeText(this, "Pulsado botón Dos", Toast.LENGTH_SHORT).show();
