@@ -78,12 +78,12 @@
             android:checked="false" />
     </RadioGroup>
 
-    <TextView
+    <EditText
         android:layout_width="118dp"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Numero Unidades"
-        android:id="@+id/textViewUnidades" />
+        android:id="@+id/EditTextUnidades"
+        android:hint="Numero de unidades" />
 
     <TextView
         android:layout_width="wrap_content"
