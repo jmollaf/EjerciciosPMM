@@ -73,23 +73,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:text="-Ingred"
-            android:id="@+id/checkBoxMenos" />
+            android:text="Extra de queso"
+            android:id="@+id/checkBoxExtra"
+            android:checked="false" />
     </RadioGroup>
 
     <TextView
         android:layout_width="118dp"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
-        android:id="@+id/textView" />
+        android:text="Numero Unidades"
+        android:id="@+id/textViewUnidades" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
-        android:id="@+id/textView2"
+        android:text="$$$$$$$$$$$$$"
+        android:id="@+id/textViewTotal"
         android:layout_gravity="right" />
 
     <Button
