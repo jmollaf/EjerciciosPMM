@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Spinner miSpinner = (Spinner) findViewById(R.id.spinnerPizzas);
         ArrayAdapter<String> miAdaptador = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, pizzas);
-        miAdaptador.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); /* MIRAR BIEN( es diferente al ListaView) */
+        miAdaptador.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         miSpinner.setAdapter(miAdaptador);
 
 
