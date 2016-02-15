@@ -1,4 +1,4 @@
-package com.example.mati.primerosqlite;
+package com.example.juan.proyectofinal;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

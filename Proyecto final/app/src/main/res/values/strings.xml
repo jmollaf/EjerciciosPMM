@@ -1,6 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">PrimeroSQLite</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">Proyecto Final</string>
+    <string name="strTitle">REGISTRO UNIVERSITARIO</string>
     <string name="action_settings">Settings</string>
+    <string name="strName">Nombre completo :</string>
+    <string name="strFechaNac">Fecha de nacimiento :</string>
+    <string name="strPais">Pais :</string>
+    <string name="strSpeak">Habla ingles :</string>
+    <string name="strSi">Si</string>
+    <string name="strfecha">00/00/0000</string>
+    <string name="strSexo">Sexo</string>
+    <string name="strMan">Hombre</string>
+    <string name="strWoman">Mujer</string>
+    <string name="strReg">Registrar</string>
+    <string name="strCerrar">Cerrar</string>
+    <string name="strNuevo">Nuevo</string>
+    <string name="strLista">Ver universitarios registrados</string>
+    <string name="strDelete">Eliminar</string>
+    <string name="strRegistros">Ver registros</string>
+    <string name="strContenido">Lorem ipsum</string>
+
+    <string-array name="paises">
+        <item>España</item>
+        <item>Portugal</item>
+        <item>Francia</item>
+        <item>Alemania</item>
+        <item>Inglaterra</item>
+        <item>Italia</item>
+        <item>Escocia</item>
+        <item>Irlanda</item>
+        <item>Suiza</item>
+        <item>Suecia</item>
+        <item>Noruega</item>
+        <item>Finlandia</item>
+    </string-array>
+
+    <string name="title_activity_registro">Proyecto final</string>
+    <string name="title_activity_registros">Proyecto final</string>
+
 </resources>
