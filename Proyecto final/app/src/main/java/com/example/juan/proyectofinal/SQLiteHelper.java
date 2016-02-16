@@ -8,20 +8,20 @@ package com.example.juan.proyectofinal;
     public class SQLiteHelper extends SQLiteOpenHelper {
 
         //nombre de la base de datos
-        private static final String __DATABASE = "dbUniversidad";
+        private static final String __DATABASE = "dbTrabajadores";
         //versión de la base de datos
         private static final int __VERSION = 3;
         //nombre tabla y campos de tabla
-        public final String __tabla__ = "Universitario";
+        public final String __tabla__ = "Trabajador";
         public final String __campo_id = "id";
         public final String __campo_nombre = "Nombre";
         public final String __campo_fechanac = "FechaNac";
         public final String __campo_pais = "Pais";
         public final String __campo_sexo = "Sexo";
         public final String __campo_ingles = "Ingles";
-        //Instrucción SQL para crear las tablas
+
 	/*
-	 * CREATE TABLE "Universitario" (
+	 * CREATE TABLE "Trabajador" (
 	                "id" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL  UNIQUE ,
 	                "Nombre" TEXT, "FechaNac" DATETIME, "Pais" TEXT, "Sexo" TEXT, "Ingles" TEXT )
 	 * */

@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Proyecto Final</string>
-    <string name="strTitle">REGISTRO UNIVERSITARIO</string>
+    <string name="strTitle">REGISTRO DE EMPLEADOS</string>
     <string name="action_settings">Settings</string>
     <string name="strName">Nombre completo :</string>
     <string name="strFechaNac">Fecha de nacimiento :</string>
@@ -16,9 +16,10 @@
     <string name="strReg">Registrar</string>
     <string name="strCerrar">Cerrar</string>
     <string name="strNuevo">Nuevo</string>
-    <string name="strLista">Ver universitarios registrados</string>
+    <string name="strLista">Ver trabajadores registrados</string>
     <string name="strDelete">Eliminar</string>
     <string name="strRegistros">Ver registros</string>
+    <string name="strEditar"></string>
     <string name="strContenido">Lorem ipsum</string>
 
     <string-array name="paises">

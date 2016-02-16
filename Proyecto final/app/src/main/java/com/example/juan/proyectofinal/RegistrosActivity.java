@@ -34,7 +34,7 @@ public class RegistrosActivity extends Activity implements OnItemClickListener{
         sqlite.abrir();
         //obtiene registros e imprimir en el listview
         Cursor cursor = sqlite.getRegistros();
-        ArrayList<String> listData = sqlite.getFormatListUniv( cursor );
+        ArrayList<String> listData = sqlite.getFormatListTrab( cursor );
         adaptador = new ArrayAdapter<String>( this ,android.R.layout.simple_list_item_1  , listData );
         listView.setAdapter( adaptador );
         listView.setOnItemClickListener( this );

@@ -49,7 +49,7 @@ public class RegistroActivity extends Activity implements OnClickListener {
             sqlite = new SQLite( this );
             sqlite.abrir();
             Cursor cursor = sqlite.getRegistro(id);
-            ArrayList<String> reg = sqlite.getFormatListUniv(cursor);
+            ArrayList<String> reg = sqlite.getFormatListTrab(cursor);
             textView.setText( reg.get(0)  );
         }
         //
@@ -71,11 +71,11 @@ public class RegistroActivity extends Activity implements OnClickListener {
                 startActivity( iMain );
                 break;
             case R.id.btnDelete:
-                //Muestra una ventana de dialo para confirmar eliminacion de registro
+                //Muestra una ventana de dialogo para confirmar eliminacion de registro
                 new AlertDialog.Builder(this)
                         .setIcon(android.R.drawable.ic_dialog_alert)
                         .setTitle("Eliminar")
-                        .setMessage("En verdad desea eliminar este registro?")
+                        .setMessage("El empleado va a ser eliminado de la base de datos")
                         .setPositiveButton("Si", new DialogInterface.OnClickListener() {
 
                             @Override

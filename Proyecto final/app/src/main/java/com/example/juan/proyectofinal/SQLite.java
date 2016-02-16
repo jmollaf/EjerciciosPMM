@@ -32,24 +32,19 @@ package com.example.juan.proyectofinal;
         }
 
         /**
-         * Metodo para agregar un nuevo registro
-         * @param String nombre Nombre completo
-         * @param String fecha fecha de nacimiento de la forma 12/05/1900
-         * @param String pais
-         * @param String sexo
-         * @param String ingles si habla ingles
-         * @return BOOLEAN TRUE si tuvo exito FALSE caso contrario
+         * Metodo para agregar un nuevo registro.
+         * Devuelve true si se consigue o false si da error.
          * */
-        public boolean addRegistro( String nombre, String fecha, String pais, String sexo, String ingles )
+        public boolean addRegistro( Persona trab )
         {
-            if( nombre.length()> 0 )
+            if( trab.getNombre().length()> 0 )
             {
                 ContentValues contentValues = new ContentValues();
-                contentValues.put( sqliteHelper.__campo_nombre , nombre);
-                contentValues.put( sqliteHelper.__campo_fechanac , fecha  );
-                contentValues.put( sqliteHelper.__campo_pais , pais);
-                contentValues.put( sqliteHelper.__campo_sexo , sexo);
-                contentValues.put( sqliteHelper.__campo_ingles , ingles);
+                contentValues.put( sqliteHelper.__campo_nombre , trab.getNombre());
+                contentValues.put( sqliteHelper.__campo_fechanac , trab.getFecha());
+                contentValues.put( sqliteHelper.__campo_pais , trab.getPais());
+                contentValues.put( sqliteHelper.__campo_sexo , trab.getSexo());
+                contentValues.put( sqliteHelper.__campo_ingles , trab.getIngles());
                 Log.i("SQLite", "Nuevo registro " );
                 return ( db.insert( sqliteHelper.__tabla__ , null, contentValues ) != -1 )?true:false;
             }
@@ -59,8 +54,8 @@ package com.example.juan.proyectofinal;
 
 
         /**
-         * Metodo que retorna el ID del ultimo universitario registrado
-         * @return integer ID -1 si no existen registros
+         * Metodo que devuelve el ID del ultimo trabajador registrado
+         * Devuelve -1 si no existen registros
          * */
         public int getUltimoID()
         {
@@ -84,18 +79,14 @@ package com.example.juan.proyectofinal;
         }
 
         /**
-         * @param INT ID del registro a eliminar
-         * @return BOOLEAN
+         * Borra registro, le pasamos id del registro a borrar
          * */
         public boolean borrar_registro( int id )
         {
-            //table , whereClause, whereArgs
             return  (db.delete( sqliteHelper.__tabla__ , sqliteHelper.__campo_id + " = " + id ,  null) > 0) ? true:false;
-
         }
         /**
-         * Obtiene todos los registros de la unica tabla de la base de datos
-         * @return Cursor
+         * Obtiene todos los registros de la base de datos
          * */
         public Cursor getRegistros()
         {
@@ -131,10 +122,9 @@ package com.example.juan.proyectofinal;
         }
 
         /**
-         * Dado un Cursor con los registros de la base de datos, da formato y retorna resultado
-         * @return ArrayList<String>
+         * Devuelve un arraylist con los datos formateados de un registro
          * */
-        public ArrayList<String> getFormatListUniv( Cursor cursor )
+        public ArrayList<String> getFormatListTrab( Cursor cursor )
         {
             ArrayList<String> listData = new ArrayList<String>();
             String item = "";

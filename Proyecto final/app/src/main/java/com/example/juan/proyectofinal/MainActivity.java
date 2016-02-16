@@ -104,11 +104,9 @@ public class MainActivity extends Activity implements OnClickListener {
                 View radioButton = radioGroup.findViewById( radioButtonID );
                 int index = radioGroup.indexOfChild( radioButton );
                 //Registra en la base de datos
-                if ( sqlite.addRegistro( txtName.getText().toString(),
-                        txtFechaNac.getText().toString(),
-                        sPaises.getSelectedItem().toString(),
-                        ( index == 0)?"Hombre":"Mujer" ,
-                        ( chIdioma.isChecked() )?"Si":"No" ) )
+                Persona trabajador = new Persona(txtName.getText().toString(),txtFechaNac.getText().toString(),
+                        sPaises.getSelectedItem().toString(), (index == 0)?"Hombre":"Mujer", ( chIdioma.isChecked() )?"Si":"No" );
+                if ( sqlite.addRegistro(trabajador))
                 {
                     //recupera ID de ultimo registro y pasa como parametro
                     int id = sqlite.getUltimoID();
